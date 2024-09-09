@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+//CustomHookFetch works with recept-app-backend localhost running
 
 export default function useFetch(url) {
   const [data, setData] = useState(null);
