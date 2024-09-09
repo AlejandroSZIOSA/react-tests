@@ -1,28 +1,35 @@
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import "./App.css";
-import About from "./component/routes/AboutPage";
 import ContactsPage from "./component/routes/ContactsPage";
-/* import { CustomHookFetch } from "./component/CustomHookFetch"; */
+import AboutPage from "./component/routes/AboutPage";
+import HomePage from "./component/routes/HomePage";
 
 function App() {
   return (
     <Router>
-      <header>
-        <h1>React Tests</h1>
-        {/*   <CustomHookFetch /> */}
-        <ol>
-          <li>
-            <Link to="/ContactPage">Contact page</Link>
-          </li>
-          <li>
-            <Link to="/AboutPage">About</Link>
-          </li>
-        </ol>
-      </header>
-      <Routes>
-        <Route path="/ContactPage" element={<ContactsPage />} />
-        <Route path="/AboutPage" element={<About />} />
-      </Routes>
+      <div>
+        <header style={{ display: "flex", flexDirection: "row" }}>
+          <h3>Header</h3>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/HomePage">Home Page</Link>
+              </li>
+              <li>
+                <Link to="/ContactsPage">Contact Page</Link>
+              </li>
+              <li>
+                <Link to="/AboutPage">About</Link>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <Routes>
+          <Route path="/HomePage" element={<HomePage />} />
+          <Route path="/ContactsPage" element={<ContactsPage />} />
+          <Route path="/AboutPage" element={<AboutPage />} />
+        </Routes>
+      </div>
     </Router>
   );
 }

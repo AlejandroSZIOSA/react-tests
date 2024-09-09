@@ -1,0 +1,11 @@
+import React from "react";
+import { CustomHookFetch } from "../CustomHookFetch";
+
+export default function HomePage() {
+  return (
+    <div>
+      <h1>Home Page</h1>
+      {/* <CustomHookFetch /> */}
+    </div>
+  );
+}
